@@ -4,23 +4,22 @@ namespace ExercicioFixacaoEnumComposicao.Entidades
 {
     class ItemPedido
     {
-        public Produto Produto { get; set; }
         public int Quantidade { get; set; }
         public double Preco { get; set; }
-        
+        public Produto Produto { get; set; }
 
         public ItemPedido()
         {
         }
 
-        public ItemPedido(Produto produto, int quantidade, double preco)
+        public ItemPedido(int quantidade, double preco, Produto produto)
         {
-            Produto = produto;
             Quantidade = quantidade;
             Preco = preco;
+            Produto = produto;
         }
 
-        public double subTotal(double subtotal)
+        public double SubTotal()
         {
             return Quantidade * Preco;
         }

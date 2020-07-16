@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ExercicioFixacaoEnumComposicao.Entidades.Enums
+﻿namespace ExercicioFixacaoEnumComposicao.Entidades.Enums
 {
-    class StatusDoPedido
+    enum StatusDoPedido : int
     {
+        Pagamento_Pendente = 0,
+        Processando = 1,
+        Enviado = 2,
+        Entregue = 3
     }
 }
