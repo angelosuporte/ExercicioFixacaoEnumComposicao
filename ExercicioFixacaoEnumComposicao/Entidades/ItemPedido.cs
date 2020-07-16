@@ -1,4 +1,6 @@
-﻿using ExercicioFixacaoEnumComposicao.Entidades;
+﻿using System.Globalization;
+using ExercicioFixacaoEnumComposicao.Entidades;
+
 
 namespace ExercicioFixacaoEnumComposicao.Entidades
 {
@@ -22,6 +24,11 @@ namespace ExercicioFixacaoEnumComposicao.Entidades
         public double SubTotal()
         {
             return Quantidade * Preco;
+        }
+        public override string ToString()
+        {
+            return Produto.Nome + ", $" + Preco.ToString("F2", CultureInfo.InvariantCulture) + ", Quantidade: " + Quantidade
+                + ", Subtotal: R$" + SubTotal().ToString("F2", CultureInfo.InvariantCulture);
         }
     }
 }

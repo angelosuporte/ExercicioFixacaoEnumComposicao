@@ -27,10 +27,10 @@ namespace ExercicioFixacaoEnumComposicao
             Console.Write("Quantos itens para este pedido? ");
             int nItem = int.Parse(Console.ReadLine()); //Itens diferentes
 
-            for (int i = 1; i < nItem; i++)
+            for (int i = 1; i <= nItem; i++)
             {
                 Console.WriteLine($"Informe os dados do item #{i}");
-                Console.Write("Nome do Produto :");
+                Console.Write("Nome do Produto: ");
                 string nomeProduto = Console.ReadLine();
                 Console.Write("Preço do produto: ");
                 double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);

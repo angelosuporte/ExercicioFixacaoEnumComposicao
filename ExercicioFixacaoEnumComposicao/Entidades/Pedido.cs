@@ -42,5 +42,21 @@ namespace ExercicioFixacaoEnumComposicao.Entidades
             }
             return soma;
         }
+
+        public override string ToString()
+        {
+            StringBuilder resumo = new StringBuilder();
+            resumo.AppendLine("Data do pedido: " + Data.ToString("dd/MM/aaaa HH:mm:ss"));
+            resumo.AppendLine("Status do pedido: " + Status);
+            resumo.AppendLine("Cliente: " + Cliente);
+            resumo.AppendLine("Itens do pedido: ");
+            foreach ( ItemPedido item in Itens)
+            {
+                resumo.AppendLine(item.ToString());
+            }
+
+            resumo.AppendLine("Preço total: R$" + Total().ToString("F2", CultureInfo.InvariantCulture));
+            return resumo.ToString();
+        }
     }
 }

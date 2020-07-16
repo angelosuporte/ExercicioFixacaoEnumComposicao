@@ -19,5 +19,10 @@ namespace ExercicioFixacaoEnumComposicao.Entidades
             Email = email;
             DataNascimento = dataNascimento;
         }
+
+        public override string ToString()
+        {
+            return Nome + ", (" + DataNascimento.ToString("dd/MM/aaaa") + ") - " + Email;
+        }
     }
 }
